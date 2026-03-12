@@ -23,6 +23,24 @@ const blumenballGalleryContext = import.meta.glob(
 );
 const blumenballGalleryImages = Object.values(blumenballGalleryContext);
 
+const zFitnessGalleryContext = import.meta.glob(
+  '/public/images/projects/z_fitness/z_fitness_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const zFitnessGalleryImages = Object.values(zFitnessGalleryContext);
+
+const skischulaGalleryContext = import.meta.glob(
+  '/public/images/projects/skischule_exklusiv1/shooting/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const skischulaGalleryImages = Object.values(skischulaGalleryContext);
+
+const sitzenbergGalleryContext = import.meta.glob(
+  '/public/images/projects/sitzenberg_ball2025/sitzenberg_ball2025_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const sitzenbergGalleryImages = Object.values(sitzenbergGalleryContext);
+
 export const projects = [
   {
     id: '3x3-austria-tour',
@@ -55,22 +73,34 @@ export const projects = [
     gallery: blumenballGalleryImages
   },
   {
-    id: 'vienna-marathon',
-    title: 'Vienna City Marathon 2025',
-    description: 'Energy on the streets of Vienna during the annual marathon.',
-    tags: ['Sports'],
-    location: 'Vienna',
-    coverImage: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=2070&auto=format&fit=crop',
-    gallery: []
+    id: 'z-fitness',
+    title: 'Z Fitness',
+    description: 'Commercial and sports photography for Z Fitness. Dynamic training shots and vibrant brand visuals.',
+    tags: ['Sports', 'Commercial'],
+    location: 'Austria',
+    coverImage: `${base}images/projects/z_fitness/z_fitness_gallery/P1329349.jpg`,
+    logoImage: `${base}images/projects/z_fitness/logo/z-fitness.png`,
+    gallery: zFitnessGalleryImages
   },
   {
-    id: 'summer-wedding',
-    title: 'Anna & Marco Wedding',
-    description: 'Intimate moments and grand celebrations captured during a beautiful summer wedding in Vienna.',
-    tags: ['Wedding', 'Events'],
-    location: 'Vienna',
-    coverImage: 'https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop',
-    gallery: []
+    id: 'skischule-exklusiv',
+    title: 'Skischule Exklusiv',
+    description: 'High-altitude commercial photography for Skischule Exklusiv. Capturing the thrill of alpine skiing and mountain landscapes.',
+    tags: ['Sports', 'Commercial'],
+    location: 'Austria',
+    coverImage: `${base}images/projects/skischule_exklusiv1/shooting/260205_piste-1355165.jpg`,
+    logoImage: `${base}images/projects/skischule_exklusiv1/logo/exklusiv_logo.png`,
+    gallery: skischulaGalleryImages
+  },
+  {
+    id: 'sitzenberg-ball',
+    title: 'Sitzenberg Ball 2025',
+    description: 'Elegant event photography from the Sitzenberg Ball. Portraits, atmosphere and the magic of a grand evening.',
+    tags: ['Events'],
+    location: 'Lower Austria',
+    coverImage: `${base}images/projects/sitzenberg_ball2025/sitzenberg_ball2025_gallery/P1317491.jpg`,
+    logoImage: `${base}images/projects/sitzenberg_ball2025/logo/sitzenberg_ball_logo.png`,
+    gallery: sitzenbergGalleryImages
   }
 ];
 

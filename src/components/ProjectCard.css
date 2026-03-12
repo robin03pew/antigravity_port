@@ -84,6 +84,8 @@
   /* Logo zooms in to 100% scale while fading in */
   transform: scale(1);
   opacity: 1;
+  /* Subtle but large centered black drop shadow beneath the white logo */
+  filter: drop-shadow(0 0 40px rgba(0, 0, 0, 0.7));
 }
 
 /* Restoring content styles below the image */

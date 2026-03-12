@@ -25,11 +25,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container hero-container">
-          <motion.div 
+          <motion.div
             className="hero-content"
             style={{ y: yParallaxText }}
           >
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -56,11 +56,19 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
             >
-              <a href="#featured" className="btn-primary mt-4 inline-block">View Work</a>
+              <button
+                className="btn-primary mt-4 inline-block"
+                onClick={() => {
+                  const el = document.getElementById('featured');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                View Work
+              </button>
             </motion.div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             className="hero-image-wrapper"
             style={{ y: yParallaxImage }}
             initial={{ opacity: 0, scale: 0.95 }}
@@ -75,7 +83,7 @@ const Home = () => {
       {/* Featured Projects */}
       <section id="featured" className="section-padding featured-section">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="section-header"
             initial="hidden"
             whileInView="visible"
@@ -83,9 +91,9 @@ const Home = () => {
             variants={fadeUp}
           >
             <h2 className="section-title">Selected Work</h2>
-            <Link to="/projects" className="link-arrow">View All Projects \u2192</Link>
+            <Link to="/projects" className="link-arrow">View All Projects</Link>
           </motion.div>
-          
+
           <div className="projects-grid">
             {featuredProjects.map((project, index) => (
               <ProjectCard key={project.id} project={project} index={index} />
@@ -97,7 +105,7 @@ const Home = () => {
       {/* Services Section */}
       <section className="section-padding services-section">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="section-header text-center"
             initial="hidden"
             whileInView="visible"
@@ -106,7 +114,7 @@ const Home = () => {
           >
             <h2 className="section-title">Expertise</h2>
           </motion.div>
-          
+
           <Accordion items={services} />
         </div>
       </section>
@@ -114,7 +122,7 @@ const Home = () => {
       {/* Clients Section */}
       <section className="section-padding clients-section">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="section-header text-center"
             initial="hidden"
             whileInView="visible"
@@ -123,8 +131,8 @@ const Home = () => {
           >
             <h2 className="section-title">Trusted By</h2>
           </motion.div>
-          
-          <motion.div 
+
+          <motion.div
             className="clients-grid"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}

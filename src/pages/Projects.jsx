@@ -6,12 +6,12 @@ import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import './Projects.css';
 
-const FILTERS = ['All', 'Sports', 'Events', 'Festivals', 'Wedding'];
+const FILTERS = ['All', 'Sports', 'Events', 'Festivals', 'Wedding', 'Commercial'];
 
 const Projects = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const filterParam = searchParams.get('filter');
-  
+
   // Set initial filter based on URL, or default to 'All'
   const [activeFilter, setActiveFilter] = useState(() => {
     if (filterParam) {
@@ -45,14 +45,14 @@ const Projects = () => {
     <AnimatedPage>
       <div className="projects-page">
         <div className="container">
-          <motion.div 
+          <motion.div
             className="projects-header"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h1>Selected Work</h1>
-            
+
             <div className="filter-system">
               {FILTERS.map(filter => (
                 <button

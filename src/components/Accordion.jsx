@@ -6,7 +6,7 @@ import './Accordion.css';
 
 const AccordionItem = ({ item, isExpanded, onToggle, index }) => {
   return (
-    <motion.div 
+    <motion.div
       className={`accordion-item ${isExpanded ? 'expanded' : ''}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -15,9 +15,13 @@ const AccordionItem = ({ item, isExpanded, onToggle, index }) => {
     >
       <button className="accordion-header" onClick={onToggle}>
         <h3>{item.title}</h3>
-        <span className="accordion-icon">
-          {isExpanded ? <Minus size={20} /> : <Plus size={20} />}
-        </span>
+        <motion.span
+          className="accordion-icon"
+          animate={{ rotate: isExpanded ? 45 : 0 }}
+          transition={{ duration: 0.3, ease: 'easeInOut' }}
+        >
+          <Plus size={20} />
+        </motion.span>
       </button>
 
       <AnimatePresence initial={false}>
@@ -49,7 +53,7 @@ const AccordionItem = ({ item, isExpanded, onToggle, index }) => {
 };
 
 const Accordion = ({ items }) => {
-  const [expandedIndex, setExpandedIndex] = useState(0); // First item open by default
+  const [expandedIndex, setExpandedIndex] = useState(null); // All closed by default
 
   return (
     <div className="accordion-container">
@@ -59,7 +63,7 @@ const Accordion = ({ items }) => {
           index={index}
           item={item}
           isExpanded={expandedIndex === index}
-          onToggle={() => setExpandedIndex(expandedIndex === index ? false : index)}
+          onToggle={() => setExpandedIndex(expandedIndex === index ? null : index)}
         />
       ))}
     </div>
