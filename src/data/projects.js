@@ -1,16 +1,27 @@
 // Mock data for projects
 
-// Dynamically import all images from the 3x3_stock gallery folder at build time
-const stockGalleryContext = import.meta.glob('/public/images/projects/3x3_stock/3x3_stock_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
-const stockGalleryImages = Object.keys(stockGalleryContext).map(path => path.replace(/^\/public/, ''));
+// Helper: Vite's BASE_URL is '/' in dev and '/antigravity_port/' in production
+const base = import.meta.env.BASE_URL;
 
-// Dynamically import void gallery
-const voidGalleryContext = import.meta.glob('/public/images/projects/void2025/void2025_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
-const voidGalleryImages = Object.keys(voidGalleryContext).map(path => path.replace(/^\/public/, ''));
+// Dynamically import all images from gallery folders at build time
+// Using { as: 'url' } gives us the correct resolved public URL at build time
+const stockGalleryContext = import.meta.glob(
+  '/public/images/projects/3x3_stock/3x3_stock_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const stockGalleryImages = Object.values(stockGalleryContext);
 
-// Dynamically import blumenball gallery
-const blumenballGalleryContext = import.meta.glob('/public/images/projects/blumenball2026/blumenball2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}', { eager: true });
-const blumenballGalleryImages = Object.keys(blumenballGalleryContext).map(path => path.replace(/^\/public/, ''));
+const voidGalleryContext = import.meta.glob(
+  '/public/images/projects/void2025/void2025_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const voidGalleryImages = Object.values(voidGalleryContext);
+
+const blumenballGalleryContext = import.meta.glob(
+  '/public/images/projects/blumenball2026/blumenball2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const blumenballGalleryImages = Object.values(blumenballGalleryContext);
 
 export const projects = [
   {
@@ -19,8 +30,8 @@ export const projects = [
     description: 'Complete coverage of the 3x3 Austria Tour finals in Stockerau. Fast-paced action shots and emotional player portraits.',
     tags: ['Sports', 'Events'],
     location: 'Lower Austria',
-    coverImage: '/images/projects/3x3_stock/3x3_stock_gallery/P1224852-Enhanced-NR.jpg',
-    logoImage: '/images/projects/3x3_stock/logo/3x3_logo.png',
+    coverImage: `${base}images/projects/3x3_stock/3x3_stock_gallery/P1224852-Enhanced-NR.jpg`,
+    logoImage: `${base}images/projects/3x3_stock/logo/3x3_logo.png`,
     gallery: stockGalleryImages
   },
   {
@@ -29,8 +40,8 @@ export const projects = [
     description: 'Immersive visual coverage of the VOID Festival. Capturing the energy, light shows, and the massive crowd.',
     tags: ['Festivals', 'Events'],
     location: 'Austria',
-    coverImage: '/images/projects/void2025/void2025_gallery/P1280259.jpg',
-    logoImage: '/images/projects/void2025/logo/void_logo.png',
+    coverImage: `${base}images/projects/void2025/void2025_gallery/P1280259.jpg`,
+    logoImage: `${base}images/projects/void2025/logo/void_logo.png`,
     gallery: voidGalleryImages
   },
   {
@@ -39,8 +50,8 @@ export const projects = [
     description: 'Elegant event photography capturing the prestigious Blumenball in Tulln. A mix of portrait and atmosphere shots.',
     tags: ['Events'],
     location: 'Lower Austria',
-    coverImage: '/images/projects/blumenball2026/blumenball2026_gallery/P1330548.jpg',
-    logoImage: '/images/projects/blumenball2026/logo/blumenball_logo.png',
+    coverImage: `${base}images/projects/blumenball2026/blumenball2026_gallery/P1330548.jpg`,
+    logoImage: `${base}images/projects/blumenball2026/logo/blumenball_logo.png`,
     gallery: blumenballGalleryImages
   },
   {
@@ -71,5 +82,4 @@ export const services = [
   { id: 'wedding', title: 'Wedding Photography', image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop' },
   { id: 'video', title: 'Videography', image: 'https://images.unsplash.com/photo-1589882260714-2cde2f26038a?q=80&w=2070&auto=format&fit=crop' }
 ];
-
-export const portraitImage = "/images/robin_1mb.jpg"; // Photographer portrait placeholder
+export const portraitImage = `${base}images/robin_1mb.jpg`;
