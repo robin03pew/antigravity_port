@@ -1,0 +1,114 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-link {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: var(--border-color);
+  /* placeholder color */
+}
+
+/* Base image transition with a strong speed ramp curve (cubic-bezier) for cinematic feel */
+.project-card-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1), filter 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.project-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Using white with overlay blend mode to mimic a camera flash on top of the image */
+  background: rgba(255, 255, 255, 0.55);
+  mix-blend-mode: overlay;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  padding: 2rem;
+}
+
+/* Secondary wrapper specifically for the logo so it doesn't get affected by the overlay blend mode */
+.project-card-logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  pointer-events: none; /* Let hovers pass through */
+}
+
+.project-card-logo {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  opacity: 0;
+  /* Logo starts slightly zoomed out for a zoom-in effect */
+  transform: scale(0.9);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Hover Effects */
+.project-card-link:hover .project-card-bg {
+  transform: scale(1.08);
+  /* Cinematic zoom and gaussian blur */
+  filter: blur(4px);
+}
+
+.project-card-link:hover .project-card-overlay {
+  opacity: 1;
+}
+
+.project-card-link:hover .project-card-logo {
+  /* Logo zooms in to 100% scale while fading in */
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Restoring content styles below the image */
+.project-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.project-card-content h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.project-card-link:hover .project-card-content h3 {
+  color: var(--text-muted);
+}
+
+.project-card-meta {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}

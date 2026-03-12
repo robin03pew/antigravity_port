@@ -1,0 +1,126 @@
+.about-page {
+  padding-top: 150px;
+}
+
+.bio-section {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  margin-bottom: 8rem;
+}
+
+.bio-content {
+  flex: 1;
+}
+
+.bio-content h1 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.bio-content h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+.bio-content p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.bio-content .lead-text {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.bio-image {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Equipment Section */
+.equipment-section {
+  margin-bottom: 8rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+}
+
+.equipment-section h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 3rem;
+}
+
+.equipment-group h4 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.equipment-group ul {
+  list-style: none;
+}
+
+.equipment-group li {
+  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Clients Section */
+.about-clients-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+}
+
+.about-clients-section h3 {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 4rem;
+}
+
+.client-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 900px) {
+  .bio-section {
+    flex-direction: column-reverse;
+    gap: 3rem;
+  }
+}
