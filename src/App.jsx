@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 import Navbar from './components/Navbar';
+import MouseGlow from './components/MouseGlow';
 import Footer from './components/Footer';
 
 // Pages
@@ -17,10 +18,11 @@ function App() {
 
   return (
     <>
+      <MouseGlow />
       <Navbar />
       
       <main style={{ minHeight: '100vh' }}>
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

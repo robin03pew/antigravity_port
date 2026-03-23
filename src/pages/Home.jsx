@@ -140,7 +140,7 @@ const Home = () => {
             transition={{ duration: 1 }}
           >
             {/* Dummy Client Logos replaced with Text for now */}
-            {['Red Bull', 'Nike', 'VOID Festival', 'Austria Basketball', 'Vienna City Marathon', 'Erste Bank'].map((client, i) => (
+            {['VOID Festival', 'SKN St. Pölten', 'Z-Fitness', 'Skischule Exklusiv', 'BBC Tulln'].map((client, i) => (
               <div key={i} className="client-logo-placeholder">
                 {client}
               </div>

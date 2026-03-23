@@ -38,7 +38,7 @@ const ProjectDetail = () => {
     700: 1
   };
 
-  const allImages = project ? [project.coverImage, ...(project.gallery || [])] : [];
+  const allImages = project?.gallery || [];
 
   const openLightbox = (index) => setLightboxState({ index, direction: 0 }); // 0 for zoom/fade (initial open)
   const closeLightbox = () => setLightboxState({ index: null, direction: 0 });

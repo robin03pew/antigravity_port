@@ -6,13 +6,10 @@ import './About.css';
 
 const About = () => {
   const equipment = [
-    { category: 'Cameras', items: ['Sony A1', 'Sony A7IV', 'Sony FX3'] },
-    { category: 'Lenses', items: ['Sony 16-35mm f/2.8 GM', 'Sony 24-70mm f/2.8 GM II', 'Sony 70-200mm f/2.8 GM II', 'Sony 50mm f/1.2 GM'] },
-    { category: 'Lighting & Audio', items: ['Profoto B10X Plus', 'Rode Wireless GO II', 'DJI Mic'] },
-    { category: 'Other', items: ['DJI Mavic 3 Pro', 'DJI RS 3 Pro Gimbal'] }
+    { category: 'Camera', items: ['Panasonic Lumix G9'] },
+    { category: 'Lenses', items: ['Olympus M.Zuiko 40-150mm F2.8 PRO', 'Panasonic Leica 12-60mm 2.8-4.0'] },
+    { category: 'Lighting', items: ['GODOX TT350O', 'Godox X2T-O'] }
   ];
-
-  const clients = ['Red Bull', 'Nike', 'VOID Festival', 'Austria Basketball', 'Vienna City Marathon', 'Erste Bank', 'Audi', 'Red Bull Records'];
 
   const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -23,10 +20,10 @@ const About = () => {
     <AnimatedPage>
       <div className="about-page section-padding">
         <div className="container">
-          
+
           {/* Bio Section */}
           <section className="bio-section">
-            <motion.div 
+            <motion.div
               className="bio-content"
               initial="hidden"
               whileInView="visible"
@@ -45,8 +42,8 @@ const About = () => {
                 With years of experience shooting dynamic environments, I thrive in fast-paced situations where anticipating the next moment is key. I work closely with brands, agencies, and individuals to create high-impact visual content.
               </p>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="bio-image"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -58,7 +55,7 @@ const About = () => {
 
           {/* Equipment Section */}
           <section className="equipment-section">
-            <motion.h3 
+            <motion.h3
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
@@ -68,8 +65,8 @@ const About = () => {
             </motion.h3>
             <div className="equipment-grid">
               {equipment.map((group, index) => (
-                <motion.div 
-                  key={group.category} 
+                <motion.div
+                  key={group.category}
                   className="equipment-group"
                   initial="hidden"
                   whileInView="visible"
@@ -88,28 +85,7 @@ const About = () => {
             </div>
           </section>
 
-          {/* Clients Section */}
-          <section className="about-clients-section text-center">
-            <motion.h3
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
-              Selected Clients
-            </motion.h3>
-            <motion.div 
-              className="clients-list"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-            >
-              {clients.map(client => (
-                <span key={client} className="client-name">{client}</span>
-              ))}
-            </motion.div>
-          </section>
+
 
         </div>
       </div>
