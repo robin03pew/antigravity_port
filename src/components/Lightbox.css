@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.95);
-  z-index: 1000;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  z-index: 1010;
+  z-index: 10000;
   opacity: 0.7;
   transition: opacity 0.3s ease, transform 0.3s ease;
   padding: 0.5rem;
@@ -90,6 +90,10 @@
 }
 
 @media (max-width: 768px) {
+  .lightbox-close {
+    top: 5rem;
+    right: 1.5rem;
+  }
   .lightbox-prev {
     left: 0.5rem;
   }
