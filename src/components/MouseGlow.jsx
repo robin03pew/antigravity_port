@@ -7,6 +7,13 @@ export default function MouseGlow() {
   const raf = useRef(null);
 
   useEffect(() => {
+    // Disable on mobile/touch devices
+    const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    if (isTouch || window.innerWidth < 1024) {
+      if (glowRef.current) glowRef.current.style.display = 'none';
+      return;
+    }
+
     const handleMove = (e) => {
       pos.current = { x: e.clientX, y: e.clientY };
     };

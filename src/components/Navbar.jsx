@@ -46,11 +46,24 @@ const Navbar = () => {
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="mobile-toggle"
+            className={`mobile-toggle ${isOpen ? 'open' : ''}`}
             onClick={() => setIsOpen(!isOpen)}
             aria-label="Toggle menu"
           >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
+            <div className="hamburger">
+              <motion.span 
+                animate={isOpen ? { rotate: 45, y: 9.5 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span 
+                animate={isOpen ? { opacity: 0, x: 20 } : { opacity: 1, x: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+              <motion.span 
+                animate={isOpen ? { rotate: -45, y: -9.5 } : { rotate: 0, y: 0 }}
+                transition={{ duration: 0.3 }}
+              />
+            </div>
           </button>
         </div>
       </header>
@@ -60,18 +73,23 @@ const Navbar = () => {
         {isOpen && (
           <motion.div 
             className="mobile-nav-overlay"
-            initial={{ opacity: 0, y: '-100%' }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: '-100%' }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
             <nav className="mobile-nav">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 + 0.2 }}
+                  initial={{ opacity: 0, y: 40, rotateX: -45 }}
+                  animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                  exit={{ opacity: 0, y: 20, transition: { duration: 0.2 } }}
+                  transition={{ 
+                    duration: 0.6, 
+                    delay: i * 0.1, 
+                    ease: [0.16, 1, 0.3, 1] 
+                  }}
                 >
                   <NavLink 
                     to={link.path}

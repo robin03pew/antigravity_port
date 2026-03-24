@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 120;
   padding: 2rem 0;
   transition: background-color var(--transition-fast), padding var(--transition-fast);
 }
@@ -65,7 +65,27 @@
 
 .mobile-toggle {
   display: none;
-  z-index: 101;
+  z-index: 110;
+  position: relative;
+  width: 30px;
+  height: 20px;
+}
+
+.hamburger {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-main);
+  border-radius: 4px;
+  transform-origin: center;
 }
 
 .mobile-nav-overlay {
@@ -75,10 +95,11 @@
   width: 100%;
   height: 100vh;
   background-color: var(--bg-color);
-  z-index: 99;
+  z-index: 110;
   display: flex;
   align-items: center;
   justify-content: center;
+  perspective: 1000px;
 }
 
 .mobile-nav {
