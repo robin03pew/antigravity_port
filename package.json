@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://robin03pew.github.io/antigravity_port/",
+  "homepage": ".",
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
