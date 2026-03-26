@@ -3,9 +3,10 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 120;
+  z-index: 1000;
   padding: 2rem 0;
   transition: background-color var(--transition-fast), padding var(--transition-fast);
+  pointer-events: none; /* Allow clicks to pass through transparent areas! */
 }
 
 .navbar.scrolled {
@@ -13,12 +14,18 @@
   backdrop-filter: blur(10px);
   padding: 1rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  pointer-events: auto; /* Active once background is present */
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
+}
+
+.nav-container > * {
+  pointer-events: auto; /* Re-enable for your logo and icons */
 }
 
 .logo {
