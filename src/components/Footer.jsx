@@ -8,7 +8,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <div className="logo">adamek.media</div>
+          <div className="logo">
+            <img src="/adamek_logo.svg" alt="adamek.media" className="footer-logo" />
+          </div>
           <p>Sports & Event Visuals</p>
         </div>
         
@@ -26,6 +28,11 @@ const Footer = () => {
       
       <div className="container footer-bottom">
         <p>&copy; {year} Robin Adamek. All rights reserved.</p>
+        <div className="footer-legal">
+          <a href="/imprint" className="legal-link">Impressum</a>
+          <a href="/privacy" className="legal-link">Datenschutz</a>
+          <a href="/terms" className="legal-link">AGB</a>
+        </div>
       </div>
     </footer>
   );

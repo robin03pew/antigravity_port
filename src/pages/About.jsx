@@ -35,6 +35,9 @@ const About = () => {
               <p className="lead-text">
                 Vienna based photographer and filmmaker specializing in sports, events, festivals and commercial content.
               </p>
+              <p className="about-contact-info">
+                <a href="tel:+4367761954000">+43 677 619 54 000</a> | <a href="mailto:hello@adamek.media">hello@adamek.media</a>
+              </p>
               <p>
                 My approach to photography and filmmaking is centered around capturing the raw energy and authentic emotion of the moment. Whether it's the peak action in a sports competition, the atmosphere of a music festival, or the intimate moments of a wedding, my goal is to deliver cinematic and premium visuals that tell a compelling story.
               </p>

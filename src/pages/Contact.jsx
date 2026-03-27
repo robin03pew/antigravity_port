@@ -41,9 +41,9 @@ const Contact = () => {
                 <span>hello@adamek.media</span>
               </a>
               
-              <a href="tel:+43600000000" className="contact-item">
+              <a href="tel:+4367761954000" className="contact-item">
                 <Phone size={24} />
-                <span>+43 600 000 000 (Call / WhatsApp)</span>
+                <span>+43 677 619 54 000 (Call / WhatsApp)</span>
               </a>
               
               <a href="https://instagram.com/adamek.media" target="_blank" rel="noopener noreferrer" className="contact-item">
