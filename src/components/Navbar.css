@@ -29,14 +29,9 @@
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-}
-
-.nav-logo {
-  height: 30px;
-  width: auto;
-  filter: invert(1) brightness(2); /* Ensure visibility on dark bg */
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
 }
 
 .desktop-nav {

@@ -28,7 +28,7 @@ const Navbar = () => {
       <header className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container nav-container">
           <Link to="/" className="logo">
-            <img src="/adamek_logo.svg" alt="adamek.media" className="nav-logo" />
+            adamek.media
           </Link>
           
           {/* Desktop Nav */}

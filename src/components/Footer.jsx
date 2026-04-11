@@ -8,9 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="container footer-container">
         <div className="footer-brand">
-          <div className="logo">
-            <img src="/adamek_logo.svg" alt="adamek.media" className="footer-logo" />
-          </div>
+          <div className="logo">adamek.media</div>
           <p>Sports & Event Visuals</p>
         </div>
         
