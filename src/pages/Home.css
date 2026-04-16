@@ -162,6 +162,10 @@
     height: 40vh; /* Reduced height */
     max-height: 350px;
   }
+
+  .hero-portrait {
+    object-position: top;
+  }
   
   .hero-content .location {
     margin-bottom: 2rem;
