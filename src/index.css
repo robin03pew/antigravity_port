@@ -18,6 +18,10 @@
 
 html, body {
   background-color: var(--bg-color);
+  background-image: url('/images/assets/bg_desktop.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;

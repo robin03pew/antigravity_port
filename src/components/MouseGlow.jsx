@@ -50,7 +50,7 @@ export default function MouseGlow() {
         width: '500px',
         height: '500px',
         borderRadius: '50%',
-        background: 'radial-gradient(circle, rgba(40, 12, 106, 0.64) 0%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(98, 68, 171, 0.64) 0%, transparent 40%)',
         filter: 'blur(60px)',
         pointerEvents: 'none',
         zIndex: 0,
@@ -58,6 +58,7 @@ export default function MouseGlow() {
         marginLeft: '-250px',
         marginTop: '-250px',
         willChange: 'transform',
+        mixBlendMode: 'screen',
       }}
     />
   );
