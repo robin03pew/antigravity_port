@@ -1,12 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language.startsWith('en') ? 'de' : 'en';
+    i18n.changeLanguage(nextLang);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +24,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.projects'), path: '/projects' },
+    { name: t('nav.about'), path: '/about' },
+    { name: t('nav.contact'), path: '/contact' }
   ];
 
   return (
@@ -42,6 +49,15 @@ const Navbar = () => {
                 {link.name}
               </NavLink>
             ))}
+            
+            <button 
+              onClick={toggleLanguage} 
+              className="nav-link lang-toggle"
+              style={{ background: 'transparent', border: 'none', cursor: 'pointer', fontWeight: 600 }}
+              aria-label="Toggle language"
+            >
+              {i18n.language.startsWith('en') ? 'EN' : 'DE'}
+            </button>
           </nav>
 
           {/* Mobile Menu Toggle */}
@@ -100,6 +116,25 @@ const Navbar = () => {
                   </NavLink>
                 </motion.div>
               ))}
+              
+              <motion.div
+                initial={{ opacity: 0, y: 40, rotateX: -45 }}
+                animate={{ opacity: 1, y: 0, rotateX: 0 }}
+                exit={{ opacity: 0, y: 20, transition: { duration: 0.2 } }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: navLinks.length * 0.1, 
+                  ease: [0.16, 1, 0.3, 1] 
+                }}
+              >
+                <button 
+                  onClick={() => { toggleLanguage(); setIsOpen(false); }} 
+                  className="mobile-link"
+                  style={{ background: 'transparent', border: 'none', cursor: 'pointer', marginTop: '1rem', display: 'inline-block' }}
+                >
+                  {i18n.language.startsWith('en') ? 'EN / DE' : 'DE / EN'}
+                </button>
+              </motion.div>
             </nav>
           </motion.div>
         )}

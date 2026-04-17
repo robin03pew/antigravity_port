@@ -1,10 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Instagram } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import AnimatedPage from '../components/AnimatedPage';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: { 
@@ -30,9 +32,8 @@ const Contact = () => {
             initial="hidden"
             animate="visible"
           >
-            <motion.h1 variants={itemVariants}>Hello.</motion.h1>
-            <motion.p variants={itemVariants} className="contact-subtitle">
-              Available for bookings worldwide. <br /> Let's create something extraordinary.
+            <motion.h1 variants={itemVariants}>{t('contact.title')}</motion.h1>
+            <motion.p variants={itemVariants} className="contact-subtitle" dangerouslySetInnerHTML={{ __html: t('contact.subtitle') }}>
             </motion.p>
             
             <motion.div className="contact-links" variants={itemVariants}>
@@ -43,7 +44,7 @@ const Contact = () => {
               
               <a href="tel:+4367761954000" className="contact-item">
                 <Phone size={24} />
-                <span>+43 677 619 54 000 (Call / WhatsApp)</span>
+                <span>+43 677 619 54 000 ({t('contact.call')})</span>
               </a>
               
               <a href="https://instagram.com/adamek.media" target="_blank" rel="noopener noreferrer" className="contact-item">

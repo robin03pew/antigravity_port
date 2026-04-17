@@ -1,9 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       className="project-card"
@@ -23,9 +25,9 @@ const ProjectCard = ({ project, index }) => {
           )}
         </div>
         <div className="project-card-content">
-          <h3>{project.title}</h3>
+          <h3>{t(`data.projects.${project.id}.title`, project.title)}</h3>
           <p className="project-card-meta">
-            {project.tags && project.tags.join(' \u2022 ')}
+            {project.tags && project.tags.map(tag => t(`projects.filter${tag}`, tag)).join(' \u2022 ')}
             {project.location && ` \u2014 ${project.location}`}
           </p>
         </div>

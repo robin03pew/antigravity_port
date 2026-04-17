@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projekte",
+    "about": "Über mich",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "subtitle": "Robin Adamek \u2014 Sport- & Eventvisualisierung",
+    "basedIn": "ansässig in Wien",
+    "viewWork": "Arbeiten ansehen",
+    "selectedWork": "Ausgewählte Arbeiten",
+    "viewAll": "Alle Projekte ansehen",
+    "expertise": "Expertise",
+    "trustedBy": "Vertraut von",
+    "ctaTitle": "Lass uns gemeinsam etwas erschaffen",
+    "contactBtn": "Kontakt aufnehmen"
+  },
+  "projects": {
+    "title": "Alle Projekte",
+    "filterAll": "Alle",
+    "filterSports": "Sport",
+    "filterEvents": "Events",
+    "filterFestivals": "Festivals",
+    "filterCommercial": "Werbung",
+    "filterWedding": "Hochzeit",
+    "notFound": "Für die ausgewählte Kategorie wurden keine Projekte gefunden.",
+    "back": "Zurück zu Projekten",
+    "projectNotFound": "Projekt nicht gefunden"
+  },
+  "about": {
+    "title": "Über",
+    "name": "Robin Adamek",
+    "bioLead": "In Wien ansässiger Fotograf und Filmemacher, spezialisiert auf Sport-, Event-, Festival- und Werbeinhalte.",
+    "bio1": "Mein Ansatz in der Fotografie und beim Filmen konzentriert sich darauf, die rohe Energie und authentische Emotion des Augenblicks einzufangen. Ob es die Spitzenaktion in einem Sportwettbewerb, die Atmosphäre eines Musikfestivals oder die intimen Momente einer Hochzeit sind \u2013 mein Ziel ist es, kinoreife und hochwertige Bilder zu liefern, die eine fesselnde Geschichte erzählen.",
+    "bio2": "Mit langjähriger Erfahrung in dynamischen Umgebungen blühe ich in schnelllebigen Situationen auf, in denen das Antizipieren des nächsten Moments entscheidend ist. Ich arbeite eng mit Marken, Agenturen und Einzelpersonen zusammen, um wirkungsvolle visuelle Inhalte zu erstellen.",
+    "equipment": "Ausrüstung",
+    "camera": "Kamera",
+    "lenses": "Objektive",
+    "lighting": "Beleuchtung"
+  },
+  "contact": {
+    "title": "Hallo.",
+    "subtitle": "Weltweit buchbar. <br /> Lass uns gemeinsam etwas Au\u00dfergew\u00f6hnliches erschaffen.",
+    "call": "Anruf / WhatsApp"
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "rights": "Alle Rechte vorbehalten."
+  },
+  "data": {
+    "projects": {
+      "3x3-austria-tour": {
+        "title": "3x3 Austria Tour \u2014 Stockerau 2025",
+        "description": "Komplette fotografische Begleitung des Finales der 3x3 Austria Tour in Stockerau. Schnelle Action-Aufnahmen und emotionale Spielerporträts."
+      },
+      "void-festival": {
+        "title": "VOID Festival 2025",
+        "description": "Immersive visuelle Begleitung des VOID Festivals. Einfangen der Energie, Lichtshows und des massiven Publikums."
+      },
+      "blumenball": {
+        "title": "Blumenball Tulln 2026",
+        "description": "Elegante Eventfotografie beim prestigeträchtigen Blumenball in Tulln. Eine Mischung aus Porträt- und Atmosphärenaufnahmen."
+      },
+      "z-fitness": {
+        "title": "Z Fitness",
+        "description": "Werbe- und Sportfotografie für Z Fitness. Dynamische Trainingsaufnahmen und lebendige Markenbilder."
+      },
+      "skischule-exklusiv": {
+        "title": "Skischule Exklusiv",
+        "description": "Werbefotografie in großer Höhe für die Skischule Exklusiv. Einfangen des Nervenkitzels beim alpinen Skifahren und der Berglandschaften."
+      },
+      "sitzenberg-ball": {
+        "title": "Sitzenberg Ball 2025",
+        "description": "Elegante Eventfotografie vom Sitzenberg Ball. Porträts, Atmosphäre und die Magie eines großen Abends."
+      },
+      "hochzeit-erwin-resi": {
+        "title": "Hochzeit Erwin und Resi",
+        "description": "Wunderschöne Hochzeitsfotografie, die die besonderen Momente von Erwin und Resi einfängt. Eine filmische und emotionale Dokumentation ihres großen Tages."
+      }
+    },
+    "services": {
+      "sports": "Sportfotografie",
+      "events": "Eventfotografie",
+      "festivals": "Festival-Begleitung",
+      "brand": "Markeninhalte",
+      "wedding": "Hochzeitsfotografie",
+      "video": "Videografie"
+    }
+  },
+  "legal": {
+    "imprint": {
+      "title": "Impressum",
+      "subtitle": "Informationen gem\u00e4\u00df \u00a7 5 ECG und Offenlegung gem\u00e4\u00df \u00a7 25 MedienG.",
+      "sections": [
+        {
+          "title": "Diensteanbieter und Medieninhaber:",
+          "content": ["Robin Adamek", "Geblergasse 24-26", "1170 Wien", "\u00d6sterreich"]
+        },
+        {
+          "title": "Kontakt:",
+          "content": ["Telefon: 0677 619 54 000", "E-Mail: hello@adamek.media", "Website: adamek.media"]
+        },
+        {
+          "title": "Unternehmensgegenstand:",
+          "content": ["Berufsfotografie", "Mitglied bei: WKO Wien, Innung der Berufsfotografen", "GISA-Zahl: 39225825", "Berufsrecht: Gewerbeordnung (www.ris.bka.gv.at)", "Aufsichtsbeh\u00f6rde/Gewerbebeh\u00f6rde: Magistrat der Stadt Wien", "Verleihungsstaat: \u00d6sterreich"]
+        },
+        {
+          "title": "Umsatzsteuer-Identifikationsnummer (UID):",
+          "content": ["Kleinunternehmer gem\u00e4\u00df \u00a7 6 Abs. 1 Z 27 UStG"]
+        },
+        {
+          "title": "EU-Streitschlichtung:",
+          "content": ["Verbraucher haben die M\u00f6glichkeit, Beschwerden an die Online-Streitbeilegungsplattform der EU zu richten: http://ec.europa.eu/odr.", "Sie k\u00f6nnen allf\u00e4llige Beschwerde auch an die oben angegebene E-Mail-Adresse richten."]
+        },
+        {
+          "title": "Haftung f\u00fcr Inhalte dieser Webseite:",
+          "content": ["Wir entwickeln die Inhalte dieser Webseite st\u00e4ndig weiter und bem\u00fchen uns korrekte und aktuelle Informationen bereitzustellen. Leider k\u00f6nnen wir keine Haftung f\u00fcr die Korrektheit aller Inhalte auf dieser Webseite \u00fcbernehmen, speziell f\u00fcr jene die seitens Dritter bereitgestellt wurden. Sollten Ihnen problematische oder rechtswidrige Inhalte auffallen, bitten wir Sie uns umgehend zu kontaktieren."]
+        },
+        {
+          "title": "Urheberrechtshinweis:",
+          "content": ["Alle Inhalte dieser Webseite (Bilder, Fotos, Texte, Videos) unterliegen dem Urheberrecht. Falls notwendig, werden wir die unerlaubte Nutzung von Teilen der Inhalte unserer Seite rechtlich verfolgen."]
+        }
+      ]
+    },
+    "privacy": {
+      "title": "Datenschutzerkl\u00e4rung",
+      "subtitle": "Stand: 26.03.2026",
+      "sections": [
+        {
+          "title": "1. Datenschutz auf einen Blick",
+          "content": ["Wir freuen uns sehr \u00fcber Ihr Interesse an unserem Unternehmen. Der Schutz Ihrer pers\u00f6nlichen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten daher ausschlie\u00dflich auf Grundlage der gesetzlichen Bestimmungen (DSGVO, TKG 2003)."]
+        },
+        {
+          "title": "2. Kontakt mit uns",
+          "content": ["Wenn Sie per Formular auf der Website oder per E-Mail Kontakt mit uns aufnehmen, werden Ihre angegebenen Daten zwecks Bearbeitung der Anfrage und f\u00fcr den Fall von Anschlussfragen sechs Monate bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter."]
+        },
+        {
+          "title": "3. Server-Log-Files",
+          "content": ["Der Provider der Seiten (GitHub Pages / Ihr Host) erhebt und speichert automatisch Informationen in so genannten Server-Log Files, die Ihr Browser automatisch \u00fcbermittelt. Dies sind: Browsertyp und Browserversion, verwendetes Betriebssystem, Referrer URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage, IP-Adresse."]
+        },
+        {
+          "title": "4. Externe Dienste (Hosting via GitHub Pages)",
+          "content": ["Diese Website wird bei GitHub Pages (GitHub Inc.) gehostet. Beim Besuch unserer Webseite erfasst GitHub Verbindungsdaten (z.B. Ihre IP-Adresse), um die Bereitstellung der Webseite zu erm\u00f6glichen und die IT-Sicherheit zu gew\u00e4hrleisten. Darauf haben wir keinen direkten Einfluss. Weitere Details finden Sie in der Datenschutzerkl\u00e4rung von GitHub."]
+        },
+        {
+          "title": "5. Ihre Rechte",
+          "content": ["Ihnen stehen grunds\u00e4tzlich die Rechte auf Auskunft, Berichtigung, L\u00f6schung, Einschr\u00e4nkung, Daten\u00fcbertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verst\u00f6\u00dft oder Ihre datenschutzrechtlichen Anspr\u00fche sonst in einer Weise verletzt worden sind, k\u00f6nnen Sie sich bei der Aufsichtsbeh\u00f6rde beschweren. In \u00d6sterreich ist dies die Datenschutzbeh\u00f6rde."]
+        },
+        {
+          "title": "Verantwortliche Stelle:",
+          "content": ["Robin Adamek", "Geblergasse 24-26", "1170 Wien", "E-Mail: hello@adamek.media"]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Allgemeine Gesch\u00e4ftsbedingungen (AGB)",
+      "subtitle": "Stand: 26.03.2026",
+      "sections": [
+        {
+          "title": "1. Geltungsbereich",
+          "content": ["Diese Allgemeinen Gesch\u00e4ftsbedingungen gelten f\u00fcr alle rechtlichen Beziehungen zwischen dem Fotografen Robin Adamek (im Folgenden \"Auftragnehmer\") und seinen Vertragspartnern (im Folgenden \"Auftraggeber\"). Ma\u00dfgeblich ist jeweils die zum Zeitpunkt des Vertragsschlusses g\u00fcltige Fassung."]
+        },
+        {
+          "title": "2. Urheberrecht und Nutzungsrechte",
+          "content": [
+            "a) Dem Auftragnehmer steht das Urheberrecht an allen von ihm erstellten Werken (Lichtbilder, Filme) nach Ma\u00dfgabe des \u00f6sterreichischen Urheberrechtsgesetzes zu.",
+            "b) Der Auftraggeber erwirbt an den Werken nur ein einfaches Nutzungsrecht f\u00fcr den vereinbarten Zweck. Jegliche weitergehende Nutzung bedarf der schriftlichen Zustimmung des Auftragnehmers.",
+            "c) Der Auftragnehmer hat das Recht, die erstellten Werke unentgeltlich zur Eigenwerbung (z.B. Website, Social Media, Portfolio) zu verwenden, sofern nicht ausdr\u00fccklich schriftlich etwas anderes vereinbart wurde."
+          ]
+        },
+        {
+          "title": "3. Verg\u00fctung und F\u00e4lligkeit",
+          "content": [
+            "a) F\u00fcr die Herstellung der Werke wird das vereinbarte Honorar berechnet. Zus\u00e4tzliche Leistungen (z.B. Mehraufwand, Reisespesen) werden gesondert in Rechnung gestellt.",
+            "b) Rechnungen sind ohne Abzug innerhalb von 14 Tagen ab Rechnungsdatum f\u00e4llig."
+          ]
+        },
+        {
+          "title": "4. Haftung",
+          "content": ["Der Auftragnehmer haftet nur f\u00fcr Vorsatz und grobe Fahrl\u00e4ssigkeit. F\u00fcr Sch\u00e4den durch h\u00f6here Gewalt, technische Ausf\u00e4lle oder Datenverlust wird (au\u00dfer bei voller Absicht) keine Haftung \u00fcbernommen."]
+        },
+        {
+          "title": "5. Stornierung",
+          "content": ["Storniert der Auftraggeber die Buchung vor dem vereinbarten Termin, ist der Auftragnehmer berechtigt, ein Ausfallshonorar in H\u00f6he von 50% der vereinbarten Gesamtsumme zu berechnen, falls die Stornierung nicht mindestens 14 Tage im Voraus erfolgt."]
+        },
+        {
+          "title": "6. Schlussbestimmungen",
+          "content": [
+            "a) Erf\u00fcllungsort und Gerichtsstand ist Wien, \u00d6sterreich.",
+            "b) Es gilt \u00f6sterreichisches Recht.",
+            "c) Sollte eine Bestimmung dieser AGB unwirksam sein, wird die Wirksamkeit der \u00fcbrigen Bestimmungen davon nicht ber\u00fchrt."
+          ]
+        }
+      ]
+    }
+  }
+}

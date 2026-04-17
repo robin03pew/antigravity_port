@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import Masonry from 'react-masonry-css';
 import { MapPin, ArrowLeft } from 'lucide-react';
 import AnimatedPage from '../components/AnimatedPage';
@@ -9,6 +10,7 @@ import { projects } from '../data/projects';
 import './ProjectDetail.css';
 
 const ProjectDetail = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const [project, setProject] = useState(null);
   const [lightboxState, setLightboxState] = useState({ index: null, direction: 0 });
@@ -24,8 +26,8 @@ const ProjectDetail = () => {
     return (
       <AnimatedPage>
         <div className="container" style={{ paddingTop: '150px', textAlign: 'center', minHeight: '60vh' }}>
-          <h2>Project not found</h2>
-          <Link to="/projects" className="btn-outline mt-4 inline-block">Back to Projects</Link>
+          <h2>{t('projects.projectNotFound')}</h2>
+          <Link to="/projects" className="btn-outline mt-4 inline-block">{t('projects.back')}</Link>
         </div>
       </AnimatedPage>
     );
@@ -52,7 +54,7 @@ const ProjectDetail = () => {
         {/* Header Section */}
         <div className="container project-header-container">
           <Link to="/projects" className="back-link">
-            <ArrowLeft size={18} /> Back to Projects
+            <ArrowLeft size={18} /> {t('projects.back')}
           </Link>
           
           <motion.div 
@@ -61,13 +63,13 @@ const ProjectDetail = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1>{project.title}</h1>
+            <h1>{t(`data.projects.${project.id}.title`, project.title)}</h1>
             
             <div className="project-tags-location">
               {project.tags && (
                 <div className="project-tags">
                   {project.tags.map(tag => (
-                    <span key={tag} className="tag">{tag}</span>
+                    <span key={tag} className="tag">{t(`projects.filter${tag}`, tag)}</span>
                   ))}
                 </div>
               )}
@@ -79,7 +81,7 @@ const ProjectDetail = () => {
             </div>
 
             <p className="project-description">
-              {project.description}
+              {t(`data.projects.${project.id}.description`, project.description)}
             </p>
           </motion.div>
         </div>

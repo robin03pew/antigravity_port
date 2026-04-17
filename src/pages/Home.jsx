@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom';
 import AnimatedPage from '../components/AnimatedPage';
 import ProjectCard from '../components/ProjectCard';
 import Accordion from '../components/Accordion';
+import { useTranslation } from 'react-i18next';
 import { projects, services, portraitImage } from '../data/projects';
 import './Home.css';
 
 const Home = () => {
+  const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const yParallaxText = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const yParallaxImage = useTransform(scrollYProgress, [0, 1], [0, 150]);
@@ -41,7 +43,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              Robin Adamek {'\u2014'} Sports & Event Visuals
+              {t('home.subtitle')}
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -49,7 +51,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="location"
             >
-              based in Vienna
+              {t('home.basedIn')}
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -63,7 +65,7 @@ const Home = () => {
                   if (el) el.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                View Work
+                {t('home.viewWork')}
               </button>
             </motion.div>
           </motion.div>
@@ -90,8 +92,8 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUp}
           >
-            <h2 className="section-title">Selected Work</h2>
-            <Link to="/projects" className="link-arrow">View All Projects</Link>
+            <h2 className="section-title">{t('home.selectedWork')}</h2>
+            <Link to="/projects" className="link-arrow">{t('home.viewAll')}</Link>
           </motion.div>
 
           <div className="projects-grid">
@@ -112,10 +114,10 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUp}
           >
-            <h2 className="section-title">Expertise</h2>
+            <h2 className="section-title">{t('home.expertise')}</h2>
           </motion.div>
 
-          <Accordion items={services} />
+          <Accordion items={services.map(s => ({...s, title: t(`data.services.${s.id}`, s.title)}))} />
         </div>
       </section>
 
@@ -129,7 +131,7 @@ const Home = () => {
             viewport={{ once: true, margin: "-100px" }}
             variants={fadeUp}
           >
-            <h2 className="section-title">Trusted By</h2>
+            <h2 className="section-title">{t('home.trustedBy')}</h2>
           </motion.div>
 
           <motion.div
@@ -158,8 +160,8 @@ const Home = () => {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <h2 className="cta-title">Let's create something together</h2>
-            <Link to="/contact" className="btn-primary cta-btn">Contact</Link>
+            <h2 className="cta-title">{t('home.ctaTitle')}</h2>
+            <Link to="/contact" className="btn-primary cta-btn">{t('home.contactBtn')}</Link>
           </motion.div>
         </div>
       </section>

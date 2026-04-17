@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import AnimatedPage from '../components/AnimatedPage';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
@@ -9,6 +10,7 @@ import './Projects.css';
 const FILTERS = ['All', 'Sports', 'Events', 'Festivals', 'Wedding', 'Commercial'];
 
 const Projects = () => {
+  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const filterParam = searchParams.get('filter');
 
@@ -51,7 +53,7 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1>Selected Work</h1>
+            <h1>{t('projects.title')}</h1>
 
             <div className="filter-system">
               {FILTERS.map(filter => (
@@ -60,7 +62,7 @@ const Projects = () => {
                   className={`filter-btn ${activeFilter === filter ? 'active' : ''}`}
                   onClick={() => handleFilterClick(filter)}
                 >
-                  {filter}
+                  {t(`projects.filter${filter}`, filter)}
                 </button>
               ))}
             </div>
@@ -82,7 +84,7 @@ const Projects = () => {
                 </div>
               ) : (
                 <div className="no-results">
-                  <p>No projects found in this category.</p>
+                  <p>{t('projects.notFound')}</p>
                 </div>
               )}
             </motion.div>

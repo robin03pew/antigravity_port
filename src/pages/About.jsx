@@ -2,13 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 import { portraitImage } from '../data/projects';
+import { useTranslation } from 'react-i18next';
 import './About.css';
 
 const About = () => {
+  const { t } = useTranslation();
   const equipment = [
-    { category: 'Camera', items: ['Panasonic Lumix G9'] },
-    { category: 'Lenses', items: ['Olympus M.Zuiko 40-150mm F2.8 PRO', 'Panasonic Leica 12-60mm 2.8-4.0'] },
-    { category: 'Lighting', items: ['GODOX TT350O', 'Godox X2T-O'] }
+    { category: t('about.camera'), items: ['Panasonic Lumix G9'] },
+    { category: t('about.lenses'), items: ['Olympus M.Zuiko 40-150mm F2.8 PRO', 'Panasonic Leica 12-60mm 2.8-4.0'] },
+    { category: t('about.lighting'), items: ['GODOX TT350O', 'Godox X2T-O'] }
   ];
 
   const fadeUp = {
@@ -30,19 +32,19 @@ const About = () => {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              <h1>About</h1>
-              <h2>Robin Adamek</h2>
+              <h1>{t('about.title')}</h1>
+              <h2>{t('about.name')}</h2>
               <p className="lead-text">
-                Vienna based photographer and filmmaker specializing in sports, events, festivals and commercial content.
+                {t('about.bioLead')}
               </p>
               <p className="about-contact-info">
                 <a href="tel:+4367761954000">+43 677 619 54 000</a> | <a href="mailto:hello@adamek.media">hello@adamek.media</a>
               </p>
               <p>
-                My approach to photography and filmmaking is centered around capturing the raw energy and authentic emotion of the moment. Whether it's the peak action in a sports competition, the atmosphere of a music festival, or the intimate moments of a wedding, my goal is to deliver cinematic and premium visuals that tell a compelling story.
+                {t('about.bio1')}
               </p>
               <p>
-                With years of experience shooting dynamic environments, I thrive in fast-paced situations where anticipating the next moment is key. I work closely with brands, agencies, and individuals to create high-impact visual content.
+                {t('about.bio2')}
               </p>
             </motion.div>
 
@@ -64,7 +66,7 @@ const About = () => {
               viewport={{ once: true }}
               variants={fadeUp}
             >
-              Equipment
+              {t('about.equipment')}
             </motion.h3>
             <div className="equipment-grid">
               {equipment.map((group, index) => (

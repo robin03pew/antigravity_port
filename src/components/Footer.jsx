@@ -1,7 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const year = new Date().getFullYear();
   
   return (
@@ -13,10 +15,10 @@ const Footer = () => {
         </div>
         
         <div className="footer-links">
-          <a href="/" className="footer-link">Home</a>
-          <a href="/projects" className="footer-link">Projects</a>
-          <a href="/about" className="footer-link">About</a>
-          <a href="/contact" className="footer-link">Contact</a>
+          <a href="/" className="footer-link">{t('nav.home')}</a>
+          <a href="/projects" className="footer-link">{t('nav.projects')}</a>
+          <a href="/about" className="footer-link">{t('nav.about')}</a>
+          <a href="/contact" className="footer-link">{t('nav.contact')}</a>
         </div>
         
         <div className="footer-social">
@@ -25,11 +27,11 @@ const Footer = () => {
       </div>
       
       <div className="container footer-bottom">
-        <p>&copy; {year} Robin Adamek. All rights reserved.</p>
+        <p>&copy; {year} Robin Adamek. {t('footer.rights')}</p>
         <div className="footer-legal">
-          <a href="/imprint" className="legal-link">Impressum</a>
-          <a href="/privacy" className="legal-link">Datenschutz</a>
-          <a href="/terms" className="legal-link">AGB</a>
+          <a href="/imprint" className="legal-link">{t('footer.imprint')}</a>
+          <a href="/privacy" className="legal-link">{t('footer.privacy')}</a>
+          <a href="/terms" className="legal-link">{t('footer.terms')}</a>
         </div>
       </div>
     </footer>
