@@ -32,8 +32,8 @@
     "title": "About",
     "name": "Robin Adamek",
     "bioLead": "Vienna based photographer and filmmaker specializing in sports, events, festivals and commercial content.",
-    "bio1": "My approach to photography and filmmaking is centered around capturing the raw energy and authentic emotion of the moment. Whether it's the peak action in a sports competition, the atmosphere of a music festival, or the intimate moments of a wedding, my goal is to deliver cinematic and premium visuals that tell a compelling story.",
-    "bio2": "With years of experience shooting dynamic environments, I thrive in fast-paced situations where anticipating the next moment is key. I work closely with brands, agencies, and individuals to create high-impact visual content.",
+    "bio1": "When I'm pitch-side or moving through a festival crowd, I’m not looking for staged poses. I want to capture the real thing: the explosive dynamic of sports, the heavy bass on the floor, the unfiltered moments. My focus is on delivering premium, cinematic content that actually hits home and tells a story.",
+    "bio2": "I thrive on pace and pressure. With experience shooting in high-energy environments, my strength lies in anticipating the next move before it happens. Partnering with brands, events, and agencies, my goal is simple: creating a visual edge that doesn't just look good, but leaves a lasting impact.",
     "equipment": "Equipment",
     "camera": "Camera",
     "lenses": "Lenses",
@@ -97,31 +97,56 @@
       "sections": [
         {
           "title": "Service Provider and Media Owner:",
-          "content": ["Robin Adamek", "Geblergasse 24-26", "1170 Vienna", "Austria"]
+          "content": [
+            "Robin Adamek",
+            "Geblergasse 24-26",
+            "1170 Vienna",
+            "Austria"
+          ]
         },
         {
           "title": "Contact:",
-          "content": ["Phone: 0677 619 54 000", "Email: hello@adamek.media", "Website: adamek.media"]
+          "content": [
+            "Phone: 0677 619 54 000",
+            "Email: hello@adamek.media",
+            "Website: adamek.media"
+          ]
         },
         {
           "title": "Object of the Company:",
-          "content": ["Professional Photography", "Member of: WKO Vienna, Guild of Professional Photographers", "GISA-Number: 39225825", "Professional Law: Trade Regulation Act (www.ris.bka.gv.at)", "Supervisory Authority/Trade Authority: Magistrate of the City of Vienna", "Awarding State: Austria"]
+          "content": [
+            "Professional Photography",
+            "Member of: WKO Vienna, Guild of Professional Photographers",
+            "GISA-Number: 39225825",
+            "Professional Law: Trade Regulation Act (www.ris.bka.gv.at)",
+            "Supervisory Authority/Trade Authority: Magistrate of the City of Vienna",
+            "Awarding State: Austria"
+          ]
         },
         {
           "title": "Value Added Tax Identification Number (VAT):",
-          "content": ["Small business owner according to \u00a7 6 Abs. 1 Z 27 UStG"]
+          "content": [
+            "Small business owner according to \u00a7 6 Abs. 1 Z 27 UStG"
+          ]
         },
         {
           "title": "EU Dispute Resolution:",
-          "content": ["Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform: http://ec.europa.eu/odr.", "You can also address any complaints to the email address provided above."]
+          "content": [
+            "Consumers have the opportunity to submit complaints to the EU's online dispute resolution platform: http://ec.europa.eu/odr.",
+            "You can also address any complaints to the email address provided above."
+          ]
         },
         {
           "title": "Liability for contents of this website:",
-          "content": ["We are constantly developing the contents of this website and strive to provide correct and up-to-date information. Unfortunately, we cannot assume liability for the correctness of all content on this website, especially for those provided by third parties. If you notice any problematic or illegal content, please contact us immediately."]
+          "content": [
+            "We are constantly developing the contents of this website and strive to provide correct and up-to-date information. Unfortunately, we cannot assume liability for the correctness of all content on this website, especially for those provided by third parties. If you notice any problematic or illegal content, please contact us immediately."
+          ]
         },
         {
           "title": "Copyright Notice:",
-          "content": ["All contents of this website (pictures, photos, texts, videos) are subject to copyright. If necessary, we will legally pursue the unauthorized use of parts of the contents of our site."]
+          "content": [
+            "All contents of this website (pictures, photos, texts, videos) are subject to copyright. If necessary, we will legally pursue the unauthorized use of parts of the contents of our site."
+          ]
         }
       ]
     },
@@ -131,27 +156,42 @@
       "sections": [
         {
           "title": "1. Privacy at a glance",
-          "content": ["We are very pleased with your interest in our company. Data protection is of a particularly high priority for us. We process your data exclusively on the basis of the legal provisions (GDPR, TKG 2003)."]
+          "content": [
+            "We are very pleased with your interest in our company. Data protection is of a particularly high priority for us. We process your data exclusively on the basis of the legal provisions (GDPR, TKG 2003)."
+          ]
         },
         {
           "title": "2. Contacting us",
-          "content": ["If you contact us via the form on the website or by e-mail, your data will be stored by us for six months for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent."]
+          "content": [
+            "If you contact us via the form on the website or by e-mail, your data will be stored by us for six months for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent."
+          ]
         },
         {
           "title": "3. Server-Log-Files",
-          "content": ["The provider of the pages (GitHub Pages / your host) automatically collects and stores information in so-called server log files, which your browser automatically transmits. These are: Browser type and version, operating system used, referrer URL, hostname of the accessing computer, time of the server request, IP address."]
+          "content": [
+            "The provider of the pages (GitHub Pages / your host) automatically collects and stores information in so-called server log files, which your browser automatically transmits. These are: Browser type and version, operating system used, referrer URL, hostname of the accessing computer, time of the server request, IP address."
+          ]
         },
         {
           "title": "4. External Services (Hosting via GitHub Pages)",
-          "content": ["This website is hosted on GitHub Pages (GitHub Inc.). When you visit our website, GitHub records connection data (e.g. your IP address) in order to make the website available and to guarantee IT security. We have no direct influence on this. Further details can be found in GitHub's privacy policy."]
+          "content": [
+            "This website is hosted on GitHub Pages (GitHub Inc.). When you visit our website, GitHub records connection data (e.g. your IP address) in order to make the website available and to guarantee IT security. We have no direct influence on this. Further details can be found in GitHub's privacy policy."
+          ]
         },
         {
           "title": "5. Your Rights",
-          "content": ["You generally have the rights to information, correction, deletion, restriction, data portability, revocation and objection. If you believe that the processing of your data violates data protection law or your data protection claims have otherwise been violated in some way, you can complain to the supervisory authority. In Austria, this is the Data Protection Authority."]
+          "content": [
+            "You generally have the rights to information, correction, deletion, restriction, data portability, revocation and objection. If you believe that the processing of your data violates data protection law or your data protection claims have otherwise been violated in some way, you can complain to the supervisory authority. In Austria, this is the Data Protection Authority."
+          ]
         },
         {
           "title": "Responsible Entity:",
-          "content": ["Robin Adamek", "Geblergasse 24-26", "1170 Vienna", "Email: hello@adamek.media"]
+          "content": [
+            "Robin Adamek",
+            "Geblergasse 24-26",
+            "1170 Vienna",
+            "Email: hello@adamek.media"
+          ]
         }
       ]
     },
@@ -161,7 +201,9 @@
       "sections": [
         {
           "title": "1. Scope",
-          "content": ["These General Terms and Conditions apply to all legal relationships between the photographer Robin Adamek (hereinafter referred to as \"Contractor\") and his contractual partners (hereinafter referred to as \"Client\"). The version valid at the time of the conclusion of the contract is authoritative."]
+          "content": [
+            "These General Terms and Conditions apply to all legal relationships between the photographer Robin Adamek (hereinafter referred to as \"Contractor\") and his contractual partners (hereinafter referred to as \"Client\"). The version valid at the time of the conclusion of the contract is authoritative."
+          ]
         },
         {
           "title": "2. Copyright and Usage Rights",
@@ -180,11 +222,15 @@
         },
         {
           "title": "4. Liability",
-          "content": ["The Contractor is only liable for intent and gross negligence. No liability is accepted for damages caused by force majeure, technical failures or data loss (except in cases of full intent)."]
+          "content": [
+            "The Contractor is only liable for intent and gross negligence. No liability is accepted for damages caused by force majeure, technical failures or data loss (except in cases of full intent)."
+          ]
         },
         {
           "title": "5. Cancellation",
-          "content": ["If the Client cancels the booking before the agreed date, the Contractor is entitled to charge a cancellation fee of 50% of the agreed total amount if the cancellation is not made at least 14 days in advance."]
+          "content": [
+            "If the Client cancels the booking before the agreed date, the Contractor is entitled to charge a cancellation fee of 50% of the agreed total amount if the cancellation is not made at least 14 days in advance."
+          ]
         },
         {
           "title": "6. Final Provisions",
