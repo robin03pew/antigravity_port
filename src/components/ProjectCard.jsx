@@ -1,19 +1,12 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './ProjectCard.css';
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project }) => {
   const { t } = useTranslation();
   return (
-    <motion.div
-      className="project-card"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 0.6, delay: (index % 3) * 0.1 }}
-    >
+    <div className="project-card">
       <Link to={`/projects/${project.id}`} className="project-card-link">
         <div className="project-card-image-wrapper">
           <img src={project.coverImage} className="project-card-bg" alt={project.title} loading="lazy" />
@@ -32,8 +25,9 @@ const ProjectCard = ({ project, index }) => {
           </p>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 };
 
 export default ProjectCard;
+

@@ -47,7 +47,23 @@ const weddingGalleryContext = import.meta.glob(
 );
 const weddingGalleryImages = Object.values(weddingGalleryContext);
 
+const gfoehlGalleryContext = import.meta.glob(
+  '/public/images/projects/volleyball_gfoehl/volleyball_gfoehl_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const gfoehlGalleryImages = Object.values(gfoehlGalleryContext);
+
 export const projects = [
+  {
+    id: 'uv-gfoehl',
+    title: 'Union Volleyball Gf\u00f6hl',
+    description: 'Dynamic sports photography for Union Volleyball Gf\u00f6hl. Capturing the intensity and teamwork on the court.',
+    tags: ['Sports', 'Events'],
+    location: 'Gf\u00f6hl - Austria',
+    coverImage: `${base}images/projects/volleyball_gfoehl/volleyball_gfoehl_gallery/260420_gfoehl-1380235_COVER.jpg`,
+    logoImage: `${base}images/projects/volleyball_gfoehl/logo/uv_gfoehl.png`,
+    gallery: gfoehlGalleryImages
+  },
   {
     id: '3x3-austria-tour',
     title: '3x3 Austria Tour \u2014 Stockerau 2025',
@@ -121,11 +137,11 @@ export const projects = [
 ];
 
 export const services = [
-  { id: 'sports', title: 'Sports Photography', image: 'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop' },
-  { id: 'events', title: 'Event Photography', image: 'https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2162&auto=format&fit=crop' },
-  { id: 'festivals', title: 'Festival Coverage', image: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1974&auto=format&fit=crop' },
-  { id: 'brand', title: 'Brand Content', image: 'https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2053&auto=format&fit=crop' },
-  { id: 'wedding', title: 'Wedding Photography', image: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop' },
-  { id: 'video', title: 'Videography', image: 'https://images.unsplash.com/photo-1589882260714-2cde2f26038a?q=80&w=2070&auto=format&fit=crop' }
+  { id: 'sports', title: 'Sports Photography', image: `${base}images/projects/3x3_stock/3x3_stock_gallery/P1181390.jpg` },
+  { id: 'events', title: 'Event Photography', image: `${base}images/projects/blumenball2026/blumenball2026_gallery/P1330672.jpg` },
+  { id: 'festivals', title: 'Festival Coverage', image: `${base}images/projects/void2025/void2025_gallery/P1280259.jpg` },
+  { id: 'brand', title: 'Brand Content', image: `${base}images/projects/z_fitness/z_fitness_gallery/P1329349.jpg` },
+  { id: 'wedding', title: 'Wedding Photography', image: `${base}images/projects/hochzeit_erwin_resi_2021/gallery/hochzeit_koestelbauer_P1036863_18-58_COVER.jpg` },
+  { id: 'video', title: 'Videography', image: `${base}images/projects/sitzenberg_ball2025/sitzenberg_ball2025_gallery/P1317491.jpg` }
 ];
 export const portraitImage = `${base}images/robin_1mb.jpg`;

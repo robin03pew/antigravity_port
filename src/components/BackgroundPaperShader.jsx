@@ -4,14 +4,14 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function BackgroundPaperShader() {
   const { scrollY } = useScroll();
-  
+
   // Subtle parallax modifiers
   // Panning down slightly as user scrolls
   const y = useTransform(scrollY, [0, 5000], [0, 250]);
-  
+
   // Rotating very slowly based on scroll depth
   const rotate = useTransform(scrollY, [0, 5000], [0, 15]);
-  
+
   // Scaling up starting to hide the edges when rotating
   const scale = useTransform(scrollY, [0, 5000], [1.1, 1.3]);
 
@@ -33,7 +33,7 @@ export default function BackgroundPaperShader() {
     >
       <MeshGradient
         style={{ width: '100%', height: '100%' }}
-        colors={["#040404", "#100011", "#0f0015", "#330047"]}
+        colors={["#1c0015", "#22061f", "#002031", "#330047"]}
         speed={1.0}
         backgroundColor="#000000"
       />

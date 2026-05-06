@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import AnimatedPage from '../components/AnimatedPage';
 import ProjectCard from '../components/ProjectCard';
@@ -23,14 +23,9 @@ const Projects = () => {
     return 'All';
   });
 
-  const [filteredProjects, setFilteredProjects] = useState(projects);
-
-  useEffect(() => {
-    if (activeFilter === 'All') {
-      setFilteredProjects(projects);
-    } else {
-      setFilteredProjects(projects.filter(p => p.tags.includes(activeFilter)));
-    }
+  const filteredProjects = useMemo(() => {
+    if (activeFilter === 'All') return projects;
+    return projects.filter(p => p.tags.includes(activeFilter));
   }, [activeFilter]);
 
   const handleFilterClick = (filter) => {
@@ -68,27 +63,39 @@ const Projects = () => {
             </div>
           </motion.div>
 
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeFilter}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.4 }}
-            >
-              {filteredProjects.length > 0 ? (
-                <div className="projects-grid">
-                  {filteredProjects.map((project, index) => (
-                    <ProjectCard key={project.id} project={project} index={index} />
+          {filteredProjects.length > 0 ? (
+            <LayoutGroup>
+              <motion.div className="projects-grid" layout>
+                <AnimatePresence mode="popLayout">
+                  {filteredProjects.map((project) => (
+                    <motion.div
+                      key={project.id}
+                      layout
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{
+                        opacity: { duration: 0.25 },
+                        scale: { duration: 0.25 },
+                        layout: { type: 'spring', stiffness: 400, damping: 32 }
+                      }}
+                    >
+                      <ProjectCard project={project} />
+                    </motion.div>
                   ))}
-                </div>
-              ) : (
-                <div className="no-results">
-                  <p>{t('projects.notFound')}</p>
-                </div>
-              )}
+                </AnimatePresence>
+              </motion.div>
+            </LayoutGroup>
+          ) : (
+            <motion.div
+              className="no-results"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <p>{t('projects.notFound')}</p>
             </motion.div>
-          </AnimatePresence>
+          )}
         </div>
       </div>
     </AnimatedPage>

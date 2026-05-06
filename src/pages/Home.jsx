@@ -98,7 +98,15 @@ const Home = () => {
 
           <div className="projects-grid">
             {featuredProjects.map((project, index) => (
-              <ProjectCard key={project.id} project={project} index={index} />
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-50px' }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
             ))}
           </div>
         </div>
