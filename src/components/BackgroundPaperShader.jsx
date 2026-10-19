@@ -33,7 +33,7 @@ export default function BackgroundPaperShader() {
     >
       <MeshGradient
         style={{ width: '100%', height: '100%' }}
-        colors={["#1c0015", "#22061f", "#002031", "#330047"]}
+        colors={["#0a1030", "#123a5c", "#0d4a4a", "#2d1b5e"]}
         speed={1.0}
         backgroundColor="#000000"
       />
