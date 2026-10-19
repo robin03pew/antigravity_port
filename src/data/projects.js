@@ -3,57 +3,125 @@
 // Helper: Vite's BASE_URL is '/' in dev and '/antigravity_port/' in production
 const base = import.meta.env.BASE_URL;
 
+// Sort gallery images by file path so numbered files (01_, 02_, ...) keep their order
+const sortedGallery = (context) =>
+  Object.keys(context)
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+    .map((key) => context[key]);
+
 // Dynamically import all images from gallery folders at build time
 // Using { as: 'url' } gives us the correct resolved public URL at build time
 const stockGalleryContext = import.meta.glob(
   '/public/images/projects/3x3_stock/3x3_stock_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const stockGalleryImages = Object.values(stockGalleryContext);
+const stockGalleryImages = sortedGallery(stockGalleryContext);
 
 const voidGalleryContext = import.meta.glob(
   '/public/images/projects/void2025/void2025_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const voidGalleryImages = Object.values(voidGalleryContext);
+const voidGalleryImages = sortedGallery(voidGalleryContext);
 
 const blumenballGalleryContext = import.meta.glob(
   '/public/images/projects/blumenball2026/blumenball2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const blumenballGalleryImages = Object.values(blumenballGalleryContext);
+const blumenballGalleryImages = sortedGallery(blumenballGalleryContext);
 
 const zFitnessGalleryContext = import.meta.glob(
   '/public/images/projects/z_fitness/z_fitness_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const zFitnessGalleryImages = Object.values(zFitnessGalleryContext);
+const zFitnessGalleryImages = sortedGallery(zFitnessGalleryContext);
 
 const skischulaGalleryContext = import.meta.glob(
   '/public/images/projects/skischule_exklusiv1/shooting/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const skischulaGalleryImages = Object.values(skischulaGalleryContext);
+const skischulaGalleryImages = sortedGallery(skischulaGalleryContext);
 
 const sitzenbergGalleryContext = import.meta.glob(
   '/public/images/projects/sitzenberg_ball2025/sitzenberg_ball2025_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const sitzenbergGalleryImages = Object.values(sitzenbergGalleryContext);
+const sitzenbergGalleryImages = sortedGallery(sitzenbergGalleryContext);
 
 const weddingGalleryContext = import.meta.glob(
   '/public/images/projects/hochzeit_erwin_resi_2021/gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const weddingGalleryImages = Object.values(weddingGalleryContext);
+const weddingGalleryImages = sortedGallery(weddingGalleryContext);
 
 const gfoehlGalleryContext = import.meta.glob(
   '/public/images/projects/volleyball_gfoehl/volleyball_gfoehl_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
   { eager: true, query: '?url', import: 'default' }
 );
-const gfoehlGalleryImages = Object.values(gfoehlGalleryContext);
+const gfoehlGalleryImages = sortedGallery(gfoehlGalleryContext);
+
+const ffaGalleryContext = import.meta.glob(
+  '/public/images/projects/ffa_championship2026/ffa_championship2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const ffaGalleryImages = sortedGallery(ffaGalleryContext);
+
+const nduGalleryContext = import.meta.glob(
+  '/public/images/projects/ndu_semesterclosing2026/ndu_semesterclosing2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const nduGalleryImages = sortedGallery(nduGalleryContext);
+
+const atzenbruggGalleryContext = import.meta.glob(
+  '/public/images/projects/usv_atzenbrugg_meister2026/usv_atzenbrugg_meister2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const atzenbruggGalleryImages = sortedGallery(atzenbruggGalleryContext);
+
+const rapidGalleryContext = import.meta.glob(
+  '/public/images/projects/skrapid_frauen2026/skrapid_frauen2026_gallery/*.{jpg,jpeg,png,webp,JPG,JPEG,PNG,WEBP}',
+  { eager: true, query: '?url', import: 'default' }
+);
+const rapidGalleryImages = sortedGallery(rapidGalleryContext);
 
 export const projects = [
+  {
+    id: 'ffa-championship-2026',
+    title: 'Functional Fitness Austria \u2014 Austrian Championship 2026',
+    description: 'Sports coverage of the Austrian Functional Fitness Championship. Sprint starts, wall balls, ski ergs and the exhaustion after the final workout.',
+    tags: ['Sports', 'Events'],
+    location: 'Vienna - Austria',
+    coverImage: `${base}images/projects/ffa_championship2026/ffa_championship2026_gallery/11_ffa_championship2026_1562261_COVER.jpg`,
+    gallery: ffaGalleryImages
+  },
+  {
+    id: 'ndu-semesterclosing-2026',
+    title: 'NDU Semester Closing 2026',
+    description: "Event photography at the New Design University's semester closing on the Danube Canal. From golden hour on the terrace to a packed dance floor.",
+    tags: ['Events'],
+    location: 'Vienna - Austria',
+    coverImage: `${base}images/projects/ndu_semesterclosing2026/ndu_semesterclosing2026_gallery/10_ndu_semesterclosing2026_02891_COVER.jpg`,
+    logoImage: `${base}images/projects/ndu_semesterclosing2026/logo/ndu_logo.png`,
+    gallery: nduGalleryImages
+  },
+  {
+    id: 'usv-atzenbrugg-meister-2026',
+    title: 'USV Atzenbrugg Championship Celebration 2026',
+    description: 'The final match of the season and the league title celebration. Goal celebrations, flares, the trophy at sunset and fireworks.',
+    tags: ['Sports', 'Events'],
+    location: 'Atzenbrugg - Lower Austria',
+    coverImage: `${base}images/projects/usv_atzenbrugg_meister2026/usv_atzenbrugg_meister2026_gallery/18_usv_atzenbrugg_meister2026_1539189_COVER.jpg`,
+    gallery: atzenbruggGalleryImages
+  },
+  {
+    id: 'skrapid-frauen-2026',
+    title: 'SK Rapid Women \u2014 Season Finale 2026',
+    description: "Matchday coverage of Rapid Women's season finale. From warm-up to goal celebrations and the party with the fans.",
+    tags: ['Sports', 'Events'],
+    location: 'Vienna - Austria',
+    coverImage: `${base}images/projects/skrapid_frauen2026/skrapid_frauen2026_gallery/13_skrapid_frauen2026_1483128_COVER.jpg`,
+    logoImage: `${base}images/projects/skrapid_frauen2026/logo/rapid_logo.png`,
+    gallery: rapidGalleryImages
+  },
   {
     id: 'uv-gfoehl',
     title: 'Union Volleyball Gf\u00f6hl',

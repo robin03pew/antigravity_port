@@ -52,6 +52,22 @@
   },
   "data": {
     "projects": {
+      "ffa-championship-2026": {
+        "title": "Functional Fitness Austria — Austrian Championship 2026",
+        "description": "Sports coverage of the Austrian Functional Fitness Championship. Sprint starts, wall balls, ski ergs and the exhaustion after the final workout."
+      },
+      "ndu-semesterclosing-2026": {
+        "title": "NDU Semester Closing 2026",
+        "description": "Event photography at the New Design University's semester closing on the Danube Canal. From golden hour on the terrace to a packed dance floor."
+      },
+      "usv-atzenbrugg-meister-2026": {
+        "title": "USV Atzenbrugg Championship Celebration 2026",
+        "description": "The final match of the season and the league title celebration. Goal celebrations, flares, the trophy at sunset and fireworks."
+      },
+      "skrapid-frauen-2026": {
+        "title": "SK Rapid Women — Season Finale 2026",
+        "description": "Matchday coverage of Rapid Women's season finale. From warm-up to goal celebrations and the party with the fans."
+      },
       "uv-gfoehl": {
         "title": "Union Volleyball Gf\u00f6hl",
         "description": "Dynamic sports photography for Union Volleyball Gf\u00f6hl. Capturing the intensity and teamwork on the court."
