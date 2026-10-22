@@ -109,7 +109,7 @@ export const projects = [
     description: 'The final match of the season and the league title celebration. Goal celebrations, flares, the trophy at sunset and fireworks.',
     tags: ['Sports', 'Events'],
     location: 'Atzenbrugg - Lower Austria',
-    coverImage: `${base}images/projects/usv_atzenbrugg_meister2026/usv_atzenbrugg_meister2026_gallery/18_usv_atzenbrugg_meister2026_1539189_COVER.jpg`,
+    coverImage: `${base}images/projects/usv_atzenbrugg_meister2026/15_usv_atzenbrugg_meister2026_1538827_COVER.jpg`,
     gallery: atzenbruggGalleryImages
   },
   {
